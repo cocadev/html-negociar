@@ -1,0 +1,23 @@
+.button-image{
+    width: 30px;
+}
+.container { margin:10px auto;}
+.treegrid-indent {
+    width: 0;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+}
+
+.treegrid-expander {
+    width: 0;
+    height: 16px;
+    display: inline-block;
+    position: relative;
+    left:-17px;
+    cursor: pointer;
+}
+
+table, th, td :hover{
+    cursor: pointer;
+}

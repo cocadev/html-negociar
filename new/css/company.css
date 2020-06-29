@@ -1,0 +1,10 @@
+.copy-button{
+    font-size: 15px;
+    margin-left: 10px
+}
+.v-center {
+        min-height:200px;
+        display: flex;
+        justify-content:center;
+        flex-flow: column wrap;
+}

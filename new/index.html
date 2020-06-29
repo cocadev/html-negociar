@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Negociar</title>
+    <meta charset="utf-8">
+
+    <link rel="shortcut icon" type="image/png"
+          href="https://static.tutsplus.com/assets/favicon-b490c89e0c7d5748dbde558df6385abb.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Average|Chewy|Josefin+Slab|Kurale|Ultra"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/permissions.css">
+    <link rel="stylesheet" href="css/userGrid.css">
+    <link rel="stylesheet" href="css/company.css">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jqueryui.js"></script>
+    <script src="../dist/js/standalone/selectize.js"></script>
+    <script src="js/index.js"></script>
+
+    <link href="../dist/css/flags.css" rel="stylesheet">
+    <script src="../dist/js/jquery.flagstrap.js"></script>
+
+</head>
+<body>
+    <div class="container round">
+
+        <div class="nav-bar fix-position">
+
+            <div class="row">
+
+                <div class="col-sm-5">
+                    <img src="https://image.spreadshirtmedia.com/image-server/v1/compositions/T1018A70PA2202PT10X4Y44D1006204762FS3194/views/1,width=650,height=650,appearanceId=70.jpg" alt="User"
+                         class="img-responsive left" style="width: 60px; margin-left: 12px">
+                  
+                </div>
+
+                <div class="col-sm-7">
+                <div class="mr-10 right">
+                    <select class="" id="mySelect" onchange="backgroundSet()">
+                        <option value="#b4a28e">Default</option>
+                        <option value="blue">Blue</option>
+                        <option value="darkred">Red</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <br class="br"/>
+                    <div id="options" class="mt-5" data-selected-country="GB">
+                    </div>
+                </div>
+
+                <div class="icon-nav-box right">
+
+                    <a href="https://www.instagram.com" class="left">
+                        <img src="images/instagram.png" alt="User" class="img-responsive navImage ">
+                    </a>
+                    <a href="https://www.facebook.com" class="left">
+                        <img src="https://cdn.icon-icons.com/icons2/355/PNG/128/Facebook_36463.png" alt="User"
+                         class="img-responsive navImage ">
+                    </a>
+
+                    <a href="https://www.linkedin.com" class="left">
+                        <img src="https://cdn.icon-icons.com/icons2/535/PNG/128/Linkedin-Icon_icon-icons.com_52893.png" alt="User"
+                         class="img-responsive navImage ">
+                    </a>
+
+                    <a href="https://mail.google.com" class="left">
+                        <img src="https://cdn.icon-icons.com/icons2/41/PNG/128/hotmail_mail_message_6944.png" alt="User"
+                             class=" img-responsive navImage ">
+                    </a>
+
+                    <div class="dropdown left ml-30">
+
+                        <img data-toggle="dropdown" class="img-responsive navImage dropdown-toggle"
+                             src="https://cdn.icon-icons.com/icons2/39/PNG/128/user_person_people_6100.png" alt="User">
+
+                        <div class="dropdown-menu">
+
+                            <div class="left drop-header-title">
+                                <p class="drop-header-text">
+                                    <img src="https://cdn.icon-icons.com/icons2/39/PNG/128/user_person_people_6100.png" alt="User"
+                                         class="img-responsive profile-image left mr-10">
+                                    Delfraro Rodrigues, PMP, ITIL, COBIT, MBA
+                                </p>
+                                <p style="color: #a0a0a0">The brooch showed the profile of a Victorian man</p>
+                            </div>
+
+                            <p style="color: #0062a8;text-align: center;clear: both">Visualizar perfil</p>
+
+                            <p class="drop-header">CONTA</p>
+                            <p class="dropdown-text">Configuracoes e privacidade</p>
+                            <p class="dropdown-text" >Central de Ajuda</p>
+                            <p class="dropdown-text" >idioma</p>
+                            <p class="drop-header">GERENCIAR</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <nav class="navbar navbar-inverse" >
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Panda Warrior</a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Main Page<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="active"><a data-toggle="tab" href="#user">user</a></li>
+                                    <li><a data-toggle="tab" href="#company">company</a></li>
+                                    <li><a data-toggle="tab" href="#permissions">permissions</a></li>
+                                    <li><a data-toggle="tab" href="#user_grid">user grid</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Another</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <div class="row p-1">
+
+            <div class="col-sm-10 p-1"  >
+                <div class="item-box tab-content">
+
+                    <div id="user" class="tab-pane fade in active">
+                        <h3>User</h3>
+                        <div>
+                            <img src="https://cdn.icon-icons.com/icons2/39/PNG/128/user_person_people_6100.png" alt="User"
+                                 class="img-responsive userImage left">
+                            <p>put a upload field here...
+
+                        </div>
+                        <div class="form-group clear">
+                            <label><b>Name *</b></label>
+                            <input type="name" class="form-control" id="exampleName" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Password *</b></label>
+                            <input type="password" class="form-control" id="examplePassword" placeholder="Password">
+                        </div>
+
+                        <div class="detail-box">
+                            <p>another filds....will put here.
+                            <p>Use one of each type of input (e-mail, password, dropdown, checkbox, radio, etc... ) Use
+                                bootstrap validations
+                        </div>
+
+                        <div class="form-group" style="margin-left: 17px">
+                            <input type="checkbox" name="active" value="true">Active
+                        </div>
+
+                        <p class="dateText">Creation Date: xx/xx/xxxx;
+                        <p class="dateText">Last Change: xx/xx/xxxx hh:mm:ss;
+                        <p class="dateText">Last User: Scarlet Johanson (put these information responsive too...)
+
+                        <div class="clear">
+                            <button class="btn btn-primary btn-spacing">Save(put correct glyphs...)</button>
+                            <button class="btn btn-primary btn-spacing">Save and New</button>
+                            <button class="btn btn-primary btn-spacing">Back</button>
+                            <button class="btn btn-primary btn-spacing">Delete(confirm modal)</button>
+                        </div>
+
+                        <div class="detail-box">
+                            <h4>What about use different colors for each action?</h4>
+                            <p>The heigt of this div must be: If desktop, the size will full the screen with the space between
+                                div top, menu and divRodape.
+                            <p>The height e width of elements bus be minimun because whe need use well this availiable space.
+                        </div>
+                    </div>
+
+                    <div id="company" class="tab-pane fade">
+                        <h3>My Company</h3>
+                        <div>
+                            <img src="https://cdn.icon-icons.com/icons2/39/PNG/128/user_person_people_6100.png" alt="User"
+                                 class="img-responsive userImage left">
+                            <p>put a upload field here...
+
+                        </div>
+                        <div class="form-group clear">
+                            <label><b>Name *</b></label>
+                            <input type="name" class="form-control" id="examplename1" placeholder="Name">
+                        </div>
+
+                        <h3 class="mt-50">Bill Address</h3>
+                        <div class="form-group clear">
+                            <label><b>Bill Address 1 *</b></label>
+                            <input type="name" class="form-control" id="examplebill1" placeholder="Bill Address 1 *">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Bill Address 2 *</b></label>
+                            <input type="password" class="form-control" id="examplebill2" placeholder="Bill Address 2 *">
+                        </div>
+
+                        <h3 class="mt-50">Ship Address<button class="btn-info copy-button" >Copy address below</button></h3>
+
+                        <div class="form-group clear">
+                            <label><b>Ship Address 1 *</b></label>
+                            <input type="name" class="form-control" id="exampleship1" placeholder="Ship Address 1 *">
+                        </div>
+                        <div class="form-group">
+                            <label><b>Ship Address 2 *</b></label>
+                            <input type="password" class="form-control" id="exampleship2" placeholder="Ship Address 2 *">
+                        </div>
+
+                        <div class="detail-box">
+                            <p>state
+                            <p>(dropdown)
+
+                            <h3 class="mt-50">Product and Services</h3>
+                            <p style="color: #7c7c7c">Voce pode adicionar mais 4 competencias</p>
+                            <p>Competencias sugeridas com base no seu perfil:</p>
+                            <div class="control-group">
+                                <input type="text" id="input-tags" class="input-tags demo-default" value="Metodologia PMBOK,COBIT,ERP(Planejamento de recursos empresarials),Microsoft Project,Sistemas operacionais,DOS,PMO(Escritorio de projetos),Gestao de TI">
+                            </div>
+
+                            <script>
+                                $('.input-tags').selectize({
+                                    plugins: ['remove_button'],
+                                    persist: false,
+                                    create: true,
+                                    render: {
+                                        item: function(data, escape) {
+                                            return '<div>"' + escape(data.text) + '"</div>';
+                                        }
+                                    },
+                                    onDelete: function(values) {
+                                        return confirm(values.length > 1 ? 'Are you sure you want to remove these ' + values.length + ' items?' : 'Are you sure you want to remove "' + values[0] + '"?');
+                                    }
+                                });
+                            </script>
+
+                            <button class="btn btn-primary right">Adicionar</button>
+
+                            <h3 class="mt-50">Categories</h3>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-3 ">
+                                        <div class="list-group" id="list1">
+                                            <a  class="list-group-item active">List 1 <input title="toggle all" type="checkbox" class="all pull-right"></a>
+                                            <a  class="list-group-item">Second item <input type="checkbox" class="pull-right"></a>
+                                            <a  class="list-group-item">Third item <input type="checkbox" class="pull-right"></a>
+                                            <a  class="list-group-item">More item <input type="checkbox" class="pull-right"></a>
+                                            <a  class="list-group-item">Another <input type="checkbox" class="pull-right"></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 v-center">
+                                        <button title="Send to list 2" class="btn btn-default center-block add ">></button>
+                                        <br/>
+                                        <button title="Send to list 1" class="btn btn-default center-block remove"><</button>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <div class="list-group" id="list2">
+                                            <a  class="list-group-item active">List 2 <input title="toggle all" type="checkbox" class="all pull-right"></a>
+                                            <a  class="list-group-item">Alpha <input type="checkbox" class="pull-right"></a>
+                                            <a  class="list-group-item">Charlie <input type="checkbox" class="pull-right"></a>
+                                            <a  class="list-group-item">Bravo <input type="checkbox" class="pull-right"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h3 class="mt-50">Another fields</h3>
+                            <p>another filds....will put here.</p>
+
+                            <p>Use one of each type of input (e-mail, password, dropdown, checkbox, radio, etc... ) Use bootstrap validations</p>
+                        </div>
+
+                        <div class="form-group" style="margin-left: 17px">
+                            <input type="checkbox" name="active" value="true">Active
+                        </div>
+
+                        <p class="dateText">Creation Date: xx/xx/xxxx;
+                        <p class="dateText">Last Change: xx/xx/xxxx hh:mm:ss;
+                        <p class="dateText">Last User: Scarlet Johanson (put these information responsive too...)
+
+                        <div class="clear">
+                            <button class="btn btn-primary btn-spacing">Save(put correct glyphs...)</button>
+                            <button class="btn btn-primary btn-spacing">Save and New</button>
+                            <button class="btn btn-primary btn-spacing">Back</button>
+                            <button class="btn btn-primary btn-spacing">Delete(confirm modal)</button>
+                        </div>
+
+                        <div class="detail-box">
+                            <h4>What about use different colors for each action?</h4>
+                            <p>The heigt of this div must be: If desktop, the size will full the screen with the space between
+                                div top, menu and divRodape.
+                            <p>The height e width of elements bus be minimun because whe need use well this availiable space.
+                        </div>
+
+                    </div>
+
+                    <div id="user_grid" class="tab-pane fade">
+                        <h3>Clients <button class="btn btn-info p-1 fa fa-plus" style="font-size:20px;padding: 5px"></button></h3>
+                        <div>
+                            <br>
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home">search</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#menu1">advanced</a>
+                                </li>
+
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div id="home" class="container tab-pane active"><br>
+                                    <div class="form-inline">
+                                        <input type="text" class="form-control find-input ml-10 mb-10" placeholder="Find...">
+                                        <button class="btn btn-info p-1 fa fa-search ml-10 mb-10"  style="font-size:22px;padding: 5px"></button>
+                                    </div>
+                                </div>
+                                <div id="menu1" class="container tab-pane fade"><br>
+                                    <div class="form-inline mb-10">
+                                        <button class="btn btn-outline-secondary dropdown-toggle ml-10 mb-10" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Field 1</button>
+                                        <input type="text" class="form-control ml-10 mb-10" placeholder="Find...">
+                                    </div>
+                                    <div class="form-inline mb-10">
+                                        <button class="btn btn-outline-secondary dropdown-toggle ml-10 mb-10" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Field 2</button>
+                                        <input type="text" class="form-control ml-10 mb-10" placeholder="Find...">
+                                        <button class="btn btn-info p-1 fa fa-search ml-10 mb-10"  style="font-size:22px;padding: 5px"></button>
+                                    </div>
+                                    Put these elements in same form (the dropdown is not working, the size of text is not good)<br>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div style="overflow-x: auto">
+                            <table class="table table-hover mt-10" style="width:auto">
+                                <thead>
+                                <tr>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
+                                    <th>Email</th>
+                                    <th>View</th>
+                                    <th>Edit</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>john@example.com</td>
+                                    <td><button class="btn btn-info p-1 fa fa-binoculars" style="font-size:22px;padding: 5px"></button></td>
+                                    <td><button class="btn btn-info p-1 fa fa-edit" style="font-size:22px;;padding: 5px"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>Mary</td>
+                                    <td>Moe</td>
+                                    <td>mary@example.com</td>
+                                    <td><button class="btn btn-info p-1 fa fa-binoculars" style="font-size:22px;padding: 5px"></button></td>
+                                    <td><button class="btn btn-info p-1 fa fa-edit" style="font-size:22px;padding: 5px"></button></td>
+                                </tr>
+                                <tr>
+                                    <td>July</td>
+                                    <td>Dooley</td>
+                                    <td>july@example.com</td>
+                                    <td><button class="btn btn-info p-1 fa fa-binoculars" style="font-size:22px;padding: 5px"></button>
+                                    <td><button class="btn btn-info p-1 fa fa-edit" style="font-size:22px;padding: 5px"></button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <ul class="pagination djr08rem">
+                                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                            </ul>
+                        </div>
+
+                        <p> The heigt of this div must be:
+                            If desktop, the size will full the screen with the space between div top, menu and divRodape.<br>
+                            The height e width of elements bus be minimun because whe need use well this availiable space.</p>
+
+                    </div>
+                    <div id="permissions" class="tab-pane fade">
+                        <h3>Permissions</h3>
+                        <p>See the doc scope</p>
+                        <div class="" style="overflow-x: auto">
+                            <table id="tree-table" class="table table-hover">
+                                <tbody>
+
+                                <tr data-id="1" data-parent="0" data-level="1">
+                                    <th>id</th>
+                                    <td data-column="name"><b>permissions</b></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr data-id="3" data-parent="0" data-level="1">
+                                    <td>43</td>
+                                    <td data-column="name">payment requery</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="1" data-level="2">
+                                    <td>44</td>
+                                    <td data-column="name">payment 1</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="1" data-level="2">
+                                    <td>46</td>
+                                    <td data-column="name">payment 2</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="0" data-level="1">
+                                    <td>43</td>
+                                    <td data-column="name">currency requery</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="1" data-level="2">
+                                    <td>44</td>
+                                    <td data-column="name">currency 1</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="1" data-level="2">
+                                    <td>46</td>
+                                    <td data-column="name">currency 2</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="4" data-parent="0" data-level="1">
+                                    <td>55</td>
+                                    <td data-column="name">gold </td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>56</td>
+                                    <td data-column="name">gold 0</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>62</td>
+                                    <td data-column="name">gold 1</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>66</td>
+                                    <td data-column="name">gold 2</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>76</td>
+                                    <td data-column="name">gold 3</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>65</td>
+                                    <td data-column="name">gold 4</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>89</td>
+                                    <td data-column="name">gold 5</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>90</td>
+                                    <td data-column="name">gold 6</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+
+                                <tr data-id="4" data-parent="0" data-level="1">
+                                    <td>55</td>
+                                    <td data-column="name">credit </td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>56</td>
+                                    <td data-column="name">credit 0</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>62</td>
+                                    <td data-column="name">credit 1</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>66</td>
+                                    <td data-column="name">credit 2</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>76</td>
+                                    <td data-column="name">credit 3</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>65</td>
+                                    <td data-column="name">credit 4</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>89</td>
+                                    <td data-column="name">credit 5</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="5" data-parent="1" data-level="2">
+                                    <td>90</td>
+                                    <td data-column="name">credit 6</td>
+                                    <td><input type="checkbox" ></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr data-id="3" data-parent="0" data-level="1">
+                                    <td>24</td>
+                                    <td data-column="name">immutable requery</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="0" data-level="1">
+                                    <td>55</td>
+                                    <td data-column="name">bank requery</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                <tr data-id="3" data-parent="0" data-level="1">
+                                    <td>56</td>
+                                    <td data-column="name">silver requery</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" ></td>
+                                </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-2 p-1">
+
+                <div class="item-box-small mt-5">
+                    <p>Here I will put google ads.
+                    <p>This div must have 48% height
+                </div>
+
+                <div class="item-box-small mt-20">
+                    <p>And another pubs.
+                    <p>This div must have 48% height
+                    <p>x
+                </div>
+            </div>
+        </div>
+
+        <div class="row p-1">
+            <div class="col-sm-6 p-1 ">
+                <div class="item-box-small-bottom">
+                    <p>Some content that will put hire in future...
+                </div>
+            </div>
+            <div class="col-sm-6 p-1">
+
+                <div class="item-box-small-bottom">
+                    <p>Here I will put google ads.
+                    <p>This div must have 48% height
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="css/company/jquery.popSelect.min.js"></script>
+
+    <script>
+       //change the language
+        $('#options').flagStrap({
+            countries: {
+                "PT": "Português",
+                "GB": "English",
+                "ES": "Español"
+            },
+            buttonSize: "btn-sm"
+        });
+
+        // change the background
+        function backgroundSet() {
+            var x = document.getElementById("mySelect").value;
+            document.body.style.background = x;
+        }
+
+        // category picklist in company page
+       $('.add').click(function(){
+           $('.all').prop("checked",false);
+           var items = $("#list1 input:checked:not('.all')");
+           var n = items.length;
+           if (n > 0) {
+               items.each(function(idx,item){
+                   var choice = $(item);
+                   choice.prop("checked",false);
+                   choice.parent().appendTo("#list2");
+               });
+           }
+           else {
+               alert("Choose an item from list 1");
+           }
+       });
+
+       $('.remove').click(function(){
+           $('.all').prop("checked",false);
+           var items = $("#list2 input:checked:not('.all')");
+           items.each(function(idx,item){
+               var choice = $(item);
+               choice.prop("checked",false);
+               choice.parent().appendTo("#list1");
+           });
+       });
+
+       /* toggle all checkboxes in group */
+       $('.all').click(function(e){
+           e.stopPropagation();
+           var $this = $(this);
+           if($this.is(":checked")) {
+               $this.parents('.list-group').find("[type=checkbox]").prop("checked",true);
+           }
+           else {
+               $this.parents('.list-group').find("[type=checkbox]").prop("checked",false);
+               $this.prop("checked",false);
+           }
+       });
+
+       $('[type=checkbox]').click(function(e){
+           e.stopPropagation();
+       });
+
+       /* toggle checkbox when list group item is clicked */
+       $('.list-group a').click(function(e){
+
+           e.stopPropagation();
+
+           var $this = $(this).find("[type=checkbox]");
+           if($this.is(":checked")) {
+               $this.prop("checked",false);
+           }
+           else {
+               $this.prop("checked",true);
+           }
+
+           if ($this.hasClass("all")) {
+               $this.trigger('click');
+           }
+       });
+
+       //select the products and services on company page
+       $(document).ready(function() {
+
+           $('#example2').popSelect({
+               showTitle: true,
+               placeholderText: 'Competencia(ex:Analises)',
+               position: 'bottom'
+           });
+       });
+       //
+    </script>
+
+<!--permission table-->
+    <script src="js/javascript.js"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+</body>
+</html>
